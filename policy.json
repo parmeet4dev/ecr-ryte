@@ -1,0 +1,45 @@
+{
+    "Version": "2008-10-17",
+    "Statement": [
+      {
+        "Sid": "AllowPushPull",
+        "Effect": "Allow",
+        "Principal": {
+          "AWS": "arn:aws:iam::547382574378:user/a.grodon@ryte.com"
+        },
+        "Action": [
+          "ecr:BatchCheckLayerAvailability",
+          "ecr:BatchGetImage",
+          "ecr:CompleteLayerUpload",
+          "ecr:GetDownloadUrlForLayer",
+          "ecr:InitiateLayerUpload",
+          "ecr:PutImage",
+          "ecr:UploadLayerPart"
+        ]
+      },
+      {
+        "Sid": "CodeBuildAccess",
+        "Effect": "Allow",
+        "Principal": {
+          "Service": "codebuild.amazonaws.com"
+        },
+        "Action": [
+          "ecr:BatchCheckLayerAvailability",
+          "ecr:BatchGetImage",
+          "ecr:GetDownloadUrlForLayer"
+        ]
+      },
+      {
+        "Sid": "CodeBuildAccessCrossAccount",
+        "Effect": "Allow",
+        "Principal": {
+          "AWS": "arn:aws:iam::452334293290:root"
+        },
+        "Action": [
+          "ecr:BatchCheckLayerAvailability",
+          "ecr:BatchGetImage",
+          "ecr:GetDownloadUrlForLayer"
+        ]
+      }
+    ]
+  }
