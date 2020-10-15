@@ -13,11 +13,6 @@ variable "name" {
 # These variables have defaults, but may be overridden.
 # -------------------------------------------------------------------------------------------------------------------
 
-# variable "module_enabled" {
-#   type        = bool
-#   description = "(Optional) Indicated whether the module is enabled and resource should be created or not. Defaults to true."
-#   default     = true
-# }
 
 variable "immutable" {
   type        = bool
@@ -42,26 +37,3 @@ variable "policy" {
   type        = string
   default     = null
 }
-# variable "repository_policy_statements" {
-#   type        = any
-#   description = "(Optional) A list of repository policy statements."
-#   default     = []
-# }
-
-# variable "lifecycle_policy_rules" {
-#   type        = any
-#   description = "(Optional) List of lifecycle policy rules."
-#   default     = []
-# }
-
-# variable "pull_identities" {
-#   type        = list(string)
-#   description = "(Optional) List of AWS identity identifiers to grant cross account pull access to"
-#   default     = []
-# }
-
-# variable "push_identities" {
-#   type        = list(string)
-#   description = "(Optional) List of AWS identity identifiers to grant cross account pull and push access to"
-#   default     = []
-# }

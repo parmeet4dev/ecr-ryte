@@ -5,7 +5,7 @@
         "Sid": "AllowPushPull",
         "Effect": "Allow",
         "Principal": {
-          "AWS": "arn:aws:iam::547382574378:user/a.grodon@ryte.com"
+          "AWS": "arn:aws:iam::<cross-account-id>:user/<IAM-User>"
         },
         "Action": [
           "ecr:BatchCheckLayerAvailability",
@@ -33,7 +33,7 @@
         "Sid": "CodeBuildAccessCrossAccount",
         "Effect": "Allow",
         "Principal": {
-          "AWS": "arn:aws:iam::452334293290:root"
+          "AWS": "arn:aws:iam::<cross-account-id>:root"
         },
         "Action": [
           "ecr:BatchCheckLayerAvailability",
